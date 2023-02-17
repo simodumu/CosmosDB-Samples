@@ -1,2 +1,2 @@
-Azure
-Azure samples - various languages
+
+Azure CosmosDB samples
