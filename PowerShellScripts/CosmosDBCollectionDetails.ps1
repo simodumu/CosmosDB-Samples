@@ -1,7 +1,10 @@
 #Install the module if you haven't aleardy
 #Install-Module ImportExcel -AllowClobber -Force
-#connect to Azure, login will popup, provide required information 
-#Connect-AzAccount
+
+<#
+ToDo: below line will connect to Azure, login will popup, provide required information 
+#>
+Connect-AzAccount
 
 # Create an Excel object
 $ExcelObj = New-Object -comobject Excel.Application 
@@ -24,9 +27,9 @@ $ExcelWorkSheet.Cells.Item(1,7) = 'Max Throughput'
 $counter=2 #Counter for writing to Excel 
 
 <#
-ToDo: uncomment below line and set your teanantID
+ToDo: set your teanantID details
 #>
-#$tenantID= "aaaa-aaaa-aaaa-aaaa"
+$tenantID= "aaaa-aaaa-aaaa-aaaa"
 $subscriptions = Get-AzSubscription -TenantId $tenantID 
 
 foreach ($subscriptionID in $subscriptions.Id)
@@ -79,6 +82,11 @@ foreach ($subscriptionID in $subscriptions.Id)
 
     }#rsg
 }#sub
+
+<#
+ToDo: Update the file details, where you want to save collection details
+#>
+
 $FilePath= "c:\Microsoft\CosmosDB Details.xlsx"
 If (test-path $FilePath) {Remove-Item $FilePath}
 
