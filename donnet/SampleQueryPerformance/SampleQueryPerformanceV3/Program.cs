@@ -19,11 +19,15 @@ namespace SampleQueryPerformanceV3
 {
     internal class Program
     {
-        private const string Endpoint = "https://testquerytuning.documents.azure.com:443/";
-        private const string Key = "WBpPB7oxOuCpR9zILtwZJiNQ7YfcGDZoiVBweQSQomUldG3KSzUHuDgWCrU8z8QDdrkhaBE5987GACDbrIYQmg==";
+        /*
+        TODO: update below variables according to your testing environment
+        */ 
+        private const string Endpoint = "https://XXXXXXXXXXX.documents.azure.com:443/";
+        private const string Key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         private const string DatabaseName = "RetailIngest";
         private const string CollectionWithIndex = "WebsiteMetrics"; //Collect with index on Price property
         private const string CollectionWithOutIndex = "WebsiteMetricsNoIndex";//Collect without index on Price property
+         /*TODO*/
         private static CosmosClient client;
         static void Main(string[] args)
         {
