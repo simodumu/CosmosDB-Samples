@@ -14,3 +14,9 @@ click on the drop down near "New Notebook" -> select "Upload to Notebook Server"
 
 
 4) Run the commands one by one in the notebook. 
+
+## Troubleshooting
+
+## 1) Runtime errors
+If you run across runtime issues while running the code, try creating new notebook in Azure portal and copy the code in each cell.
+Refer Azure [Notebooks](https://learn.microsoft.com/en-us/azure/cosmos-db/notebooks-faq) for more details.
